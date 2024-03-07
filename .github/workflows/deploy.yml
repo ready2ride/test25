@@ -3,7 +3,7 @@ name: .NET Core
 on: [push]
 
 env:
-  AZURE_WEBAPP_NAME: lakaboddl    # set this to your application's name
+  AZURE_WEBAPP_NAME: my-app    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '6.0.x'           # set this to the dot net version to use
 
@@ -36,7 +36,7 @@ jobs:
       - name: 'Run Azure webapp deploy action using Azure Credentials'
         uses: azure/webapps-deploy@v3
         with: 
-          app-name: ${{ env.lakaboddl }} # Replace with your app name
+          app-name: ${{ env.AZURE_WEBAPP_NAME }} # Replace with your app name
           package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
       
       - name: logout
