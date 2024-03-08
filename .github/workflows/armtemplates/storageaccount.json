@@ -1,0 +1,41 @@
+{
+"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json",
+"contentVersion": "1.0.0.0",
+"parameters": {
+    "Storage Account Name": {
+        "defaultValue": null,
+        "type": "string"
+    },
+    "Storage Account Resiliency":
+        {
+        "type": "string",
+        "defaultValue": "Standard_LRS",
+        "allowedValues":
+            [
+            "Standard_LRS",
+            "Standard_GRS"
+            ]
+    }    
+},
+"variables": {
+    "RGLocation": "[resourceGroup().location]"
+},
+"resources": [
+    {
+        "comments": "Will be used to store virtual machines in this resource group",
+        "type": "Microsoft.Storage/storageAccounts",
+        "sku": {
+            "name": "[parameters('Storage Account Resiliency')]",
+            "tier": "Standard"
+        },
+        "kind": "Storage",
+        "name": "[parameters('Storage Account Name')]",
+        "apiVersion": "2016-01-01",
+        "location": "[variables('RGLocation')]",
+        "tags": {},
+        "properties": {},
+        "resources": [],
+        "dependsOn": []
+    }
+]
+}
