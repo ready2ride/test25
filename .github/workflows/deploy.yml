@@ -1,7 +1,7 @@
 on: [push]
 
 name: Linux_Container_Node_Workflow
-
+#Lagt inn informasjon
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
