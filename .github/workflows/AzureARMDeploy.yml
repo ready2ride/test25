@@ -25,3 +25,15 @@ jobs:
             --resource-group test25 \
             --template-file .github/workflows/armtemplates/storageaccount.json \
             --parameters storageAccountType=Standard_GRS
+
+      - name: Create Fileshare #EkspermimentellSone
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+           az storage share-rm create \
+           --resource-group test25 \
+           --storage-account StorageAccountDeployment \
+           --name automatisk \
+           --quota 1024 \
+           --enabled-protocols SMB \
+           --output none
