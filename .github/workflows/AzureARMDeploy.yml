@@ -33,7 +33,7 @@ jobs:
            az storage share-rm create \
            --resource-group test25 \
            --storage-account test25stdsa \
-           --name automatisk \
+           --name habahaba \
            --quota 1024 \
            --enabled-protocols SMB \
            --output none
