@@ -26,6 +26,6 @@ jobs:
 <<<<<<< HEAD
             --template-file armtemplates/storageaccount.json \
 =======
-            --template-file armtemplates\storageaccount.json \
+            --template-file storageaccount.json \
 >>>>>>> eb4d818ddb434ab9a6a6682af8f6c41aa16c40e6
             --parameters storageAccountType=Standard_GRS
