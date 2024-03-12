@@ -34,6 +34,6 @@ jobs:
            --resource-group test25 \
            --storage-account test25stdsa \
            --name habahaba \
-           --quota 1024 \
+           --quota 5120 \
            --enabled-protocols SMB \
            --output none
