@@ -23,5 +23,5 @@ jobs:
             az deployment group create \
             --name StorageAccountDeployment \
             --resource-group test33 \
-            --template-file /github/workflows/armtemplates/storageaccount.json \
+            --template-file .github/workflows/armtemplates/storageaccount.json \
             --parameters storageAccountType=Standard_GRS
