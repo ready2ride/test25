@@ -32,7 +32,7 @@ jobs:
           inlineScript: |
            az storage share-rm create \
            --resource-group test25 \
-           --storage-account StorageAccountDeployment \
+           --storage-account test25stdsa \
            --name automatisk \
            --quota 1024 \
            --enabled-protocols SMB \
