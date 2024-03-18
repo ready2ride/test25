@@ -24,7 +24,7 @@ jobs:
             --name StorageAccountDeployment \
             --resource-group test25 \
             --template-file .github/workflows/armtemplates/storageaccount.json \
-            --parameters storageAccountType=Standard_LRS
+            --parameters storageAccountType=Standard_GRS
 
       - name: Create Fileshare #EkspermimentellSone
         uses: azure/CLI@v1
